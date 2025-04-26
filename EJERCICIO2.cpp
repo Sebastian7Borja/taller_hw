@@ -6,12 +6,12 @@ void dibujarCruzPuraYDireccional(int n) {
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
             if (
-                (i == centro) ||                          
-                (j == centro) ||                          
-                (i == 0 && j >= centro) ||                
-                (i == n - 1 && j <= centro) ||            
-                (j == n - 1 && i >= centro) ||            
-                (j == 0 && i <= centro)                   
+                (i == centro) ||                          // Línea horizontal central
+                (j == centro) ||                          // Línea vertical central
+                (i == 0 && j >= centro) ||                // Norte: fila 0 hacia la derecha
+                (i == n - 1 && j <= centro) ||            // Sur: fila inferior hacia la izquierda
+                (j == n - 1 && i >= centro) ||            // Este: columna derecha hacia abajo
+                (j == 0 && i <= centro)                   // Oeste: columna izquierda hacia arriba
             )
                 cout << "*";
             else
